@@ -1,10 +1,14 @@
 <app-header></app-header>
 
 <main class="pt-20">
-  <section id="about"><app-about></app-about></section>
-  <section id="experience"><app-experience></app-experience></section>
-  <section id="projects"><app-projects></app-projects></section>
-  <section id="contact"><app-contact></app-contact></section>
+  <ng-container *ngIf="!isResumePage">
+    <section id="about"><app-about></app-about></section>
+    <section id="experience"><app-experience></app-experience></section>
+    <section id="projects"><app-projects></app-projects></section>
+    <section id="contact"><app-contact></app-contact></section>
+  </ng-container>
+  <router-outlet></router-outlet>
 </main>
 
-<app-footer></app-footer>
+<app-footer *ngIf="!isResumePage"></app-footer>
+

@@ -1,4 +1,5 @@
 import { Component, HostListener  } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { Component, HostListener  } from '@angular/core';
   standalone: false
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
+
   scrolled = false;
 
   navLinks = [
@@ -21,4 +24,8 @@ export class HeaderComponent {
   onWindowScroll() {
     this.scrolled = window.pageYOffset > 20;
   }
+
+  goToResume() {
+  this.router.navigate(['/resume']);
+}
 }

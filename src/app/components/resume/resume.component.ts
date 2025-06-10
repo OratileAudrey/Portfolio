@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-resume',
   //imports: [],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss',
+  templateUrl: './resume.component.html',
+  styleUrl: './resume.component.scss',
   standalone: false
 })
-export class FooterComponent {
+export class ResumeComponent {
 
   currentYear = new Date().getFullYear();
 }

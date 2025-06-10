@@ -1,1 +1,177 @@
-<p>contact works!</p>
+<div class="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-hidden">
+  <!-- Background decorative elements -->
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+    <div class="absolute top-24 left-12 w-32 h-32 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute bottom-32 right-16 w-40 h-40 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+    <div class="absolute top-1/2 right-1/4 w-24 h-24 bg-gradient-to-r from-indigo-400/20 to-blue-400/20 rounded-full blur-xl animate-pulse delay-500"></div>
+  </div>
+
+  <div class="container mx-auto px-4 py-16 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-6xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent mb-4 animate-fade-in">
+        Get in Touch
+      </h1>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mx-auto rounded-full"></div>
+      <p class="text-gray-600 mt-6 text-lg max-w-2xl mx-auto">Let's connect and create something amazing together</p>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Contact Form -->
+      <div class="order-2 lg:order-1">
+        <div class="relative bg-white/70 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-2xl border border-white/20 group hover:shadow-purple-500/10 transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-indigo-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+          <div class="relative z-10">
+            <div class="flex items-center mb-8">
+              <div class="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mr-3"></div>
+              <h2 class="text-2xl font-bold text-gray-800">Send me a message</h2>
+            </div>
+
+            <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" class="space-y-6">
+              <!-- Name and Email Row -->
+              <div class="grid gap-6 md:grid-cols-2">
+                <div class="relative group">
+                  <input
+                    type="text"
+                    name="name"
+                    ngModel
+                    required
+                    placeholder=" "
+                    class="peer w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent transition-all duration-300 placeholder-transparent"
+                  />
+                  <label class="absolute left-4 top-4 text-gray-500 transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-xs peer-focus:text-blue-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-blue-600">
+                    Full Name *
+                  </label>
+                  <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="relative group">
+                  <input
+                    type="email"
+                    name="email"
+                    ngModel
+                    required
+                    placeholder=" "
+                    class="peer w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-transparent transition-all duration-300 placeholder-transparent"
+                  />
+                  <label class="absolute left-4 top-4 text-gray-500 transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-xs peer-focus:text-purple-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-purple-600">
+                    Email Address *
+                  </label>
+                  <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="relative group">
+                <textarea
+                  name="message"
+                  ngModel
+                  required
+                  rows="6"
+                  placeholder=" "
+                  class="peer w-full px-4 py-4 bg-white/50 backdrop-blur-sm border border-gray-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-transparent transition-all duration-300 placeholder-transparent resize-none"
+                ></textarea>
+                <label class="absolute left-4 top-4 text-gray-500 transition-all duration-300 peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-400 peer-focus:top-1 peer-focus:text-xs peer-focus:text-indigo-600 peer-valid:top-1 peer-valid:text-xs peer-valid:text-indigo-600">
+                  Your Message *
+                </label>
+                <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              </div>
+
+              <!-- Submit Button -->
+              <button
+                type="submit"
+                [disabled]="!formRef.valid"
+                class="group relative w-full md:w-auto px-8 py-4 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-500 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 disabled:hover:shadow-none"
+              >
+                <span class="relative z-10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="m22 2-7 20-4-9-9-4Z"/>
+                    <path d="M22 2 11 13"/>
+                  </svg>
+                  Send Message
+                </span>
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-700 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info & Social -->
+      <div class="order-1 lg:order-2 space-y-8">
+        <!-- Contact Methods -->
+        <div class="relative bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/20 group">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-indigo-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+          <div class="relative z-10">
+            <div class="flex items-center mb-6">
+              <div class="w-4 h-4 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full mr-3"></div>
+              <h3 class="text-xl font-bold text-gray-800">Let's Connect</h3>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Email -->
+              <a href="mailto:manaleng.audrey2000@gmail.com" class="flex items-center p-4 bg-white/50 rounded-2xl hover:bg-white/80 transition-all duration-300 group">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800">Email</p>
+                  <p class="text-gray-600 text-sm">manaleng.audrey2000&#64;gmail.com</p>
+                </div>
+              </a>
+
+              <!-- Location -->
+              <div class="flex items-center p-4 bg-white/50 rounded-2xl">
+                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800">Location</p>
+                  <p class="text-gray-600 text-sm">Pretoria, South Africa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fun Quote -->
+        <div class="relative bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-indigo-500/10 backdrop-blur-sm p-8 rounded-3xl border border-gradient-to-r border-blue-200/50">
+          <div class="text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-purple-500 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+            <p class="text-gray-700 italic text-lg mb-4">
+              "Ready for the next adventure - whether it's in code or across continents!"
+            </p>
+            <div class="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
+}
+</style>

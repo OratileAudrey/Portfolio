@@ -27,14 +27,16 @@
             </a>
           </ng-container>
         </div>
-        <button class="ml-2 md:ml-4 px-3 md:px-5 py-1 md:py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm md:text-base font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300 flex items-center">
-          Resume
-          <span class="ml-1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 md:h-4 md:w-4">
-              <path d="m6 9 6 6 6-6"/>
-            </svg>
-          </span>
-        </button>
+
+        <button (click)="goToResume()"
+        class="ml-2 md:ml-4 px-3 md:px-5 py-1 md:py-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white text-sm md:text-base font-medium rounded-full shadow-md hover:shadow-lg transition-all duration-300 flex items-center">
+  Resume
+  <span class="ml-1">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 md:h-4 md:w-4">
+      <path d="m6 9 6 6 6-6"/>
+    </svg>
+  </span>
+</button>
       </div>
     </nav>
   </div>
