@@ -1,4 +1,56 @@
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-4xl font-bold mb-6 text-gray-800 ">Projects</h1>
-  
+<div class="relative min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-hidden">
+  <!-- Background decorative elements -->
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+    <div class="absolute top-32 right-20 w-28 h-28 bg-gradient-to-r from-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
+    <div class="absolute bottom-40 left-16 w-36 h-36 bg-gradient-to-r from-purple-400/20 to-indigo-400/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+    <div class="absolute top-2/3 right-1/4 w-20 h-20 bg-gradient-to-r from-indigo-400/20 to-blue-400/20 rounded-full blur-xl animate-pulse delay-500"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 py-16 relative z-10" id="skills">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 bg-clip-text text-transparent mb-4 animate-fade-in">
+        Projects
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 mx-auto rounded-full mb-6"></div>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto"></p>
+    </div>
+
+        <div class="mb-16">
+      <h3 class="text-2xl font-bold text-gray-800 mb-2">System Upgrade Initiative</h3>
+      <p class="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text font-semibold mb-4">
+        Internal Enterprise App • January 2025
+      </p>
+      <p class="text-gray-700 mb-4">
+        Led the upgrade of a large production system from Angular v15 to v18 and updated Ionic dependencies.
+        Resolved framework-breaking issues, handled migration across multiple modules, and improved the
+        codebase’s long-term maintainability and performance.
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <span class="skill-badge">Angular</span>
+        <span class="skill-badge">Ionic</span>
+        <span class="skill-badge">TypeScript</span>
+        <span class="skill-badge">Git</span>
+      </div>
+    </div>
+
+    <div class="mb-16">
+    <h3 class="text-2xl font-bold text-gray-800 mb-2">Reports System (Learning Platform)</h3>
+    <p class="text-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text font-semibold mb-4">
+      Internal Web App • March 2025
+    </p>
+    <p class="text-gray-700 mb-4">
+      Designed and developed a full reporting module from scratch using Vue 3 and Tailwind CSS.
+      Integrated multiple REST APIs, implemented dynamic data visualizations, and enabled
+      exporting reports to PDF and Excel. Built and maintained the entire frontend independently.
+    </p>
+    <div class="flex flex-wrap gap-2">
+      <span class="skill-badge">Vue 3</span>
+      <span class="skill-badge">Tailwind CSS</span>
+      <span class="skill-badge">Axios</span>
+      <span class="skill-badge">Chart.js</span>
+      <span class="skill-badge">jsPDF</span>
+    </div>
+    </div>
+  </div>
 </div>
