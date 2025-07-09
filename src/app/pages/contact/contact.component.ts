@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 
 @Component({
@@ -8,11 +9,13 @@ import emailjs from '@emailjs/browser';
   standalone: false
 })
 export class ContactComponent {
-onSubmit(form: any) {
+  onSubmit(form: NgForm) {
     const templateParams = {
-      from_name: form.name,
-      reply_to: form.email,
-      message: form.message,
+      from_name: form.value.name,
+      reply_to: form.value.email,
+      message: form.value.message,
+      user_date: new Date().toLocaleString(),
+      user_email: form.value.email
     };
 
     emailjs.send('service_pyh4bwa', 'template_jz226gb', templateParams, 'FclW7WidYuOCI3_RV')
