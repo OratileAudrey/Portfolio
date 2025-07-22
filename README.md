@@ -1,27 +1,49 @@
-# Portfolio
+# 🌐 Oratile Audrey – Developer Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.4.
+This is my personal portfolio website, built with **Angular 17** and **Tailwind CSS**, designed to showcase my skills, projects, experience, and journey as a developer and content creator.
 
-## Development server
+🚀 **Live site**: [oratileaudrey.github.io/Portfolio](https://oratileaudrey.github.io/Portfolio)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## ✨ Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Responsive modern UI with Tailwind CSS
+- Dark mode toggle
+- Animated experience timeline
+- Projects section with real work I've done
+- Embedded resume viewer
+- Mobile-friendly design
+- GitHub Pages deployment
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠 Tech Stack
 
-## Running unit tests
+- **Frontend**: Angular 17, TypeScript
+- **Styling**: Tailwind CSS, SCSS
+- **Build Tool**: Angular CLI
+- **Hosting**: GitHub Pages
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## 📁 Folder Structure
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+src/
+├── app/
+│ ├── components/
+│ └── pages/
+├── assets/
+│ └── resume.pdf
+├── index.html
+└── styles.scss
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 📦 Running the Project Locally
+
+Clone this repo and run the following commands:
+
+```bash
+npm install
+ng serve
